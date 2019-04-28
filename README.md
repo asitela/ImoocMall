@@ -1,6 +1,6 @@
 # imoocmall
 
-> A Vue.js project
+> A Vue.js project(该项目还没有完成，以后有时间会继续完成）
 
 ## Build Setup
 
