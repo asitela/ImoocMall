@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6Demo演示</title>
+  <style>
+    .log {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="es6">
+  <h2>ES6Demo演示</h2>
+  <div id="log" class="log">
+
+  </div>
+</div>
+<script>
+  /**
+   * 1.
+   *  console.log("a"+a);
+   var a=1;
+   console.log("b"+b);
+   let b=2;
+   function printLog(str) {
+    document.getElementById('log').innerText=str;
+  }
+   * 如果这样写输出就会报错: a会输出：aundefined，b会报错：b is not defined
+   * 原因：变量提升导致的。实际上var声名的变量有变量提升的作用的，所谓的变量提升指的就是把
+   * 这个变量的声明提到我们代码的第一行，这就叫变量提升。提升完了以后下面的变量在进行赋值，这是变量提升。
+   * 因此我们在下面在打印console.log()会是aundefined,因为没有值。
+   * 因为let是给块级作用域，他没有变量提升的作用，所以打印b会报错说没有定义。
+   */
+  var str = `
+  1.
+  console.log("a:"+a);
+  var a=1;
+  console.log("b:"+b);
+  let b=2;
+
+  2.
+  （1）var函数级作用域
+  function user() {
+    var a=1;
+  }
+  console.log("a:"+a);
+
+  (2)let是块级作用域
+  {
+    let a=1;
+    var b=2;
+  }
+  console.log("b:"+b);
+  console.log("a:"+a);
+
+  3.
+   let a = 1;
+  a = 2;
+  const b = 2;
+  b = 3;
+  const c = {s: 1}
+  c.s = 2;
+
+  4.默认参数
+   function add(flag) {
+    if (flag) {
+      return 'true'
+    } else {
+      return 'error'
+    }
+  }
+
+  console.log('add():' + add());
+
+  function sum(flag = true) {//这就是默认参数
+    if (flag) {
+      return 'true'
+    } else {
+      return 'error'
+    }
+  }
+
+  console.log('sum():' + sum());
+
+    var arr = [3, 6, 9]
+  var newarr = arr.map(function (item) {
+    item += 1;
+    return item + 2
+  })
+    console.log(newarr)
+//使用箭头函数方式实现
+  var nwearr = arr.map((item) => {
+    item + 2
+  })
+  console.log(newarr)
+
+  5.字符串、数组、对象以及我们函数的结构和扩展
+     //这是数组的结构：所谓的数组的结构就是它的分解，就是将这个数组进行分解和拆分分别得一一对应我我们的每个变量类进行赋值
+  var [a, b, c] = [3, 8, 10]//也可以理解为数组的分解
+  //字符串的结构：
+  var [x, y, z] = "Vue";
+  console.log(\`x:$\{x},y:$\{y},z:$\{z}\`)//字符串的结构可以理解为对字符串的分解，左边之所以用中括号是因为分解之后就变成了数组，需要用中括号来接受
+  //对象的解构：就是把对象的Key，value进行分解，然后对应到我们的m和n
+  var {m, n} = {m: 10, n: 20}
+  console.log(\`m:$\{m},n:$\{n}\`)//
+  //函数的结构：
+  function sum([x, y]) {
+    return x + y
+  }
+
+  var total = sum([2, 8])
+  console.log(\`total:$\{total}\`)
+
+  `
+  printLog(str);
+
+  /**
+   *  2.
+   （1）var函数级作用域
+   function user() {
+    var a=1;
+  }
+   console.log("a:"+a);
+
+   (2)let是块级作用域
+   {
+     let a=1;
+     var b=2;
+   }
+   console.log("b:"+b);
+   console.log("a:"+a);
+   * 2.var和let作用域：
+   * var是函数级的作用域：var是函数级作用域，他的作用域仅仅只存在于他的函数内部，是不会跳到函数外部的，所以会报错。
+   * let是块级作用域：
+   src/es6/ES6.html:61  */
+
+
+  /**3.
+   *  let a = 1;
+   a = 2;
+   const b = 2;
+   b = 3;
+   const c = {s: 1}
+   c.s = 2;
+   * const是定义常量b是常量，不能第二次赋值。
+   * 通过const声明的常量，它的内存地址不能改变，但是它的空间里的值可以发生改变。
+   */
+
+  let userName = 'jack'
+  printLog(`I'm ${userName}`)
+
+  /**
+   *  function add(flag) {
+    if (flag) {
+      return 'true'
+    } else {
+      return 'error'
+    }
+  }
+   console.log('add():' + add());
+   function sum(flag = true) {//这就是默认参数
+    if (flag) {
+      return 'true'
+    } else {
+      return 'error'
+    }
+  }
+   console.log('sum():' + sum());
+   * 4.默认参数-箭头函数
+   * 什么是默认参数？答： function sum(flag = true) {//这就是默认参数 if (flag) { return 'true' } else {return 'error'}}
+   *
+   *   var arr = [3, 6, 9]
+   var newarr = arr.map(function (item) {
+    item += 1;
+    return item + 2
+  })
+   console.log(newarr)
+   //使用箭头函数方式实现
+   var nwearr = arr.map((item) => {
+    item + 2
+  })
+   console.log(newarr)
+
+   * 通过箭头函数来实现在下面,如果没有参数就是一个括号，如果有参数就在括号里写参数.
+   如果 var newarr= arr.map(function (item) {
+    return item+2
+  })里面只有一句return item+2；那么就可以直接在箭头函数里这样写：  arr.map((item)=>item+2)；
+   如果里面超过了一句话，就需要使用大括号包裹住:  arr.map((item)=>{item+2})；
+   */
+  /**
+   * 5.字符串、数组、对象以及我们函数的结构和扩展
+   *   //这是数组的结构：所谓的数组的结构就是它的分解，就是将这个数组进行分解和拆分分别得一一对应我我们的每个变量类进行赋值
+   var [a, b, c] = [3, 8, 10]//也可以理解为数组的分解
+   //字符串的结构：
+   var [x, y, z] = "Vue";
+   console.log(`x:${x},y:${y},z:${z}`)//字符串的结构可以理解为对字符串的分解，左边之所以用中括号是因为分解之后就变成了数组，需要用中括号来接受
+   //对象的解构：就是把对象的Key，value进行分解，然后对应到我们的m和n
+   var {m, n} = {m: 10, n: 20}
+   console.log(`m:${m},n:${n}`)//
+   //函数的结构：
+   function sum([x, y]) {
+    return x + y
+  }
+
+   var total = sum([2, 8])
+   console.log(`total:${total}`)
+
+   */
+
+  function printLog(str) {
+    document.getElementById('log').innerText += str;
+  }
+</script>
+</body>
+</html>

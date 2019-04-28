@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6-2</title>
+</head>
+<body>
+<h2>ES6-2演示</h2>
+<script>
+  /**
+   * 6.函数Rest参数和扩展
+   * 什么是Rest参数?
+   */
+  function sum(x, y, z) {
+    let total = 0;
+    if (x) total += x;
+    if (y) total += y;
+    if (z) total += z;
+    console.log(`sum().total:${total}`)
+  }
+
+  sum(5, "", 9)
+
+  /*
+  首先使用ES5写:动态参数是三个点
+  m前面加三个点就变成了Rest参数.他是动态的，不确定的，我们也不知道会传几个参数
+  三个点放在function sum2(...m)这里的位置才叫Rest参数，放在别的地方就可能不是Rest
+  */
+  function sum2(...m) {
+    let total = 0;
+    for (var i of m) {
+      total += i;
+    }
+    console.log(`sum2().total:${total}`)
+  }
+
+  sum2(4, 8, 9, 10);
+// 使用ES6进行书写:
+  let sum3=(...m)=>{
+    let total = 0;
+    for (var i of m) {
+      total += i;
+    }
+    console.log(`sum3().total:${total}`)
+  };
+  sum3(4, 8, 9, 10);
+  /*
+  函数的扩展：依然是三个点，但是放在不同的位置意义就变了
+  三个点和数组结合就是称之为我们的函数的扩展。
+  因为它是一种运算符，三个点和我们的数组放到一起就会进行运算，
+  把4和8进行拆解，拆解之后进行输出。这就是我们的数组的扩展。
+  */
+  var [x,y]=[4,8]
+  console.log(...[4,8])
+
+
+
+
+  /**
+   * 7.Promise使用
+   *
+   */
+
+
+  /**
+   * 8.module.exports和ES6 import/export的使用
+   *
+   */
+</script>
+</body>
+</html>

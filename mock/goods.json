@@ -1,0 +1,125 @@
+{
+  "status": "0",
+  "msg": "",
+  "result": [
+    {
+      "productId": "100001",
+      "productName": "小米6",
+      "productPrice": 2209,
+      "productImg": "/static/1.jpg"
+    },
+    {
+      "productId": "100002",
+      "productName": "音响",
+      "productPrice": 99,
+      "productImg": "/static/2.jpg"
+    },
+    {
+      "productId": "100003",
+      "productName": "vivoX7",
+      "productPrice": 2499,
+      "productImg": "/static/3.jpg"
+    },
+    {
+      "productId": "100004",
+      "productName": "华硕笔记本",
+      "productPrice": 6492,
+      "productImg": "/static/4.jpg"
+    },
+    {
+      "productId": "100005",
+      "productName": "冰狐无线鼠标",
+      "productPrice": 82,
+      "productImg": "/static/2.jpg"
+    },
+    {
+      "productId": "100006",
+      "productName": "概念蓝牙耳机",
+      "productPrice": 68,
+      "productImg": "/static/3.jpg"
+    },
+    {
+      "productId": "100007",
+      "productName": "普通耳机",
+      "productPrice": 10.9,
+      "productImg": "/static/1.jpg"
+    },
+    {
+      "productId": "100008",
+      "productName": "压缩袋",
+      "productPrice": 8.9,
+      "productImg": "/static/2.jpg"
+    },
+    {
+      "productId": "100009",
+      "productName": "华为手机",
+      "productPrice": 2545,
+      "productImg": "/static/3.jpg"
+    },
+    {
+      "productId": "100010",
+      "productName": "南孚电池7号",
+      "productPrice": 12,
+      "productImg": "/static/4.jpg"
+    },
+    {
+      "productId": "100011",
+      "productName": "冰狐有线鼠标",
+      "productPrice": 40,
+      "productImg": "/static/2.jpg"
+    },
+    {
+      "productId": "100012",
+      "productName": "头戴式耳机",
+      "productPrice": 70,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i1/TB1wzL1QXXXXXXhXFXXvu8o7VXX_013524.jpg_b.jpg"
+    },
+    {
+      "productId": "100013",
+      "productName": "华硕笔记本电源器",
+      "productPrice": 500,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i4/2432556064/TB2_a2tlZjI8KJjSsppXXXbyVXa_!!2432556064.jpg_b.jpg"
+    },
+    {
+      "productId": "100014",
+      "productName": "初音未来手办",
+      "productPrice": 199,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i4/2520839748/TB1CSrczb1YBuNjSszeXXablFXa_!!0-item_pic.jpg_b.jpg"
+    },
+    {
+      "productId": "100015",
+      "productName": "童装2~3",
+      "productPrice": 15,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i1/2082230011/TB2v2YOalcXBuNjt_biXXXpmpXa_!!2082230011.jpg_b.jpg"
+    },
+    {
+      "productId": "100016",
+      "productName": "电脑包男",
+      "productPrice": 120,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i1/TB13wRBLpXXXXXFXVXXXXXXXXXX_!!0-item_pic.jpg_b.jpg"
+    },
+    {
+      "productId": "100017",
+      "productName": "电脑包女",
+      "productPrice": 120,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i2/2580967108/TB2xqLScAfb_uJkSmLyXXcxoXXa_!!2580967108.jpg_b.jpg"
+    },
+    {
+      "productId": "100018",
+      "productName": "太太乐电饭锅",
+      "productPrice": 210,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i3/TB1vlzeHpXXXXb8XpXX32g4.FXX_111033.jpg_b.jpg"
+    }, {
+      "productId": "100019",
+      "productName": "925银镯",
+      "productPrice": 250,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i4/2278874623/TB1BHAUfm8YBeNkSnb4XXaevFXa_!!0-item_pic.jpg_b.jpg"
+    },
+    {
+      "productId": "100020",
+      "productName": "家用音响",
+      "productPrice": 99,
+      "productImg": "http://img.alicdn.com/bao/uploaded/i3/TB1MMduJVXXXXaVXpXXJK449XXX_034533.jpg_b.jpg"
+    }
+  ]
+}
